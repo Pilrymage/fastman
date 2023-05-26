@@ -1,5 +1,9 @@
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
-irm get.scoop.sh | iex
+# Powershell 策略
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+# 输出
+irm get.scoop.sh -outfile 'install.ps1'
+.\install.ps1 -?
+.\install.ps1 -ScoopDir 'D:\Windows\Scoop' -ScoopGlobalDir 'D:\GlobalScoopApps' -NoProxy
 scoop install 7zip git
 scoop bucket add extras
 scoop install vscode
