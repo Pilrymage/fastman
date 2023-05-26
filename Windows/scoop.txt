@@ -1,0 +1,7 @@
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time
+irm get.scoop.sh | iex
+scoop install 7zip git
+scoop bucket add extras
+scoop install vscode
+scoop bucket add chawyehsu_dorado https://github.com/chawyehsu/dorado
+scoop install chawyehsu_dorado/clash-for-windows-np
